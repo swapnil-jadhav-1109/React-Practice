@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+    margin-bottom: 15px;
+    box-shadow: 1px 1px 15px 1px black;
+    height: 80px;
+    width: 100%;
+}
+.logo{
+    height: 70px;
+    background: none;
+    margin-top: 5px;
+}
+.nav-items > ul > a >li{
+    padding: 10px;
+    margin: 20px;
+    color: black;
+    list-style-type: none;
+}
+.nav-items > ul > a > li:hover{
+color:orangered;
+text-decoration: underline;
+}
+.nav-items > ul{
+ display: flex;
+ font-size: 20px;
+}
+.search-container{
+    display: flex;
+   justify-content: end;
+   align-items: center;
+}
+.searchInput{
+  height: 15px;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 20px;
+  /* margin-top: 15px; */
+}
+.searchButton{
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 20px;
+    height: 40px;
+    font-size: 18px;
+}
+p{
+    font-size: 20px;
+    text-align: justify;
+}
+.food-img{
+    height: 150px;
+    width: 200px;
+}
+
+/* body */
+
+.restaurant-heading{
+    margin-left: 20px;
+}
+.cards{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    margin: 5px auto;
+
+}
+
+.res-card{
+    width: 230px;
+    height: auto;
+    margin: 20px;
+ }
+ .cards{
+    display: flex;
+ }
+ .card-img{
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    
+ }
+ .star-container{
+  display: flex;
+  gap: 5px;
+ }
+.card-para{
+    font-size: 18px;
+}
+a{
+    text-decoration: none;
+    color: rgb(90, 90, 90);
+}
+.card-head{
+    color: rgb(43, 43, 43);
+}
+
