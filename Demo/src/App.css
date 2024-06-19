@@ -92,9 +92,6 @@ p{
   display: flex;
   gap: 5px;
  }
-.card-para{
-    font-size: 18px;
-}
 a{
     text-decoration: none;
     color: rgb(90, 90, 90);
