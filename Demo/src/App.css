@@ -11,7 +11,7 @@
     margin-bottom: 15px;
     box-shadow: 1px 1px 15px 1px black;
     height: 80px;
-    width: 100%;
+    width: 100vw;
 }
 .logo{
     height: 70px;
