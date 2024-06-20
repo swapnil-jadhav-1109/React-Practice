@@ -1,17 +1,27 @@
-import Card from "./Card"; 
+import Card from "./Card";
 import resobj from "../utilities/api";
+import { useState } from "react";
 const Body = () => {
+  const [listofReastaurant, setlistofRestaurant] = useState(resobj);
   return (
     <div className="body">
       <div className="restaurant-heading">
         <h1>Restaurants with online food delivery in Mumbai</h1>
       </div>
+      {/* <div className="filteredList">
+        <button onClick={() => {
+          const filtered = listofReastaurant.filter((res) => res.resobj.Food = "North Indian" );
+          setlistofRestaurant(filtered);
+        }}>
+          Top Rated Restaurants
+        </button>
+      </div> */}
       <div className="cards">
-     {
-      resobj.map((restaurant)=> <Card  key = {resobj.id} data = {restaurant}/>)
-     }
+        {
+          listofReastaurant.map((restaurant,index) => <Card key={index} data={restaurant} />)
+        }
 
-  </div>
+      </div>
     </div>
   )
 }
