@@ -20,7 +20,7 @@ const Header = () => {
       </div>
       <div className="search-container">
         <input type="search" placeholder='search Here' className='searchInput' />
-        <button className='searchButton' onClick={() => {
+        <button className='btn' onClick={() => {
           const Searched = Search.filter((res) => {
             if (resobj.foodName === "VIG") {
               console.log("this food is present to the cafe");
