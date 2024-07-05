@@ -10,11 +10,11 @@ const Body = () => {
 //   },[])
 
 //   const fetchData = async ()=>{
-//     const dat = fetch("https:/www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING")
+//     const data = fetch("https://www.google-analytics.com/g/collect?v=2&tid=G-X3K3CELKLV&gtm=45je4730v899482468z877032815za200zb77032815&_p=1720195270818&gcd=13l3l3l3l1&npa=0&dma=0&tag_exp=0&cid=947732492.1717431211&ul=en-us&sr=527x608&lps=1&uaa=&uab=64&uafvl=Not%252FA)Brand%3B8.0.0.0%7CChromium%3B126.0.6478.127%7CGoogle%2520Chrome%3B126.0.6478.127&uamb=1&uam=Nexus%205&uap=Android&uapv=6.0&uaw=0&are=1&frm=0&pscdl=noapi&_s=1&sid=1720192790&sct=7&seg=1&dl=https%3A%2F%2Fwww.swiggy.com%2F&dr=https%3A%2F%2Fwww.google.com%2F&dt=Order%20Food%20Online%20from%20India%27s%20Best%20Food%20Delivery%20Service%20%7C%20Swiggy&en=page_view&tfd=8273&_z=fetch")
   
-// const json = (await dat).json();
+// const json = await data.json();
 // console.log(json);
-// setlistofRestaurant(json.object?.data?.cards);
+// setlistofRestaurant(json.object.cards);
   
 // }; 
   return (
@@ -24,7 +24,7 @@ const Body = () => {
       </div>
       <div>
         <button className="btn" onClick={()=>{
-          const filtered = listofReastaurant.filter((res)=>res?.data?.Address == "Chembur")
+          const filtered = listofReastaurant.filter((res)=>res.Address == "Chembur")
           setlistofRestaurant(filtered);
         }}>
           top rated restaurants
