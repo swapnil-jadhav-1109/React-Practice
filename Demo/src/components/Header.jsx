@@ -22,13 +22,7 @@ const Header = () => {
         <input type="search" placeholder='search Here' className='searchInput' />
         <hr />
         <button className='btn' onClick={() => {
-          const Searched = Search.filter((res) => {
-            if (resobj.foodName === "VIG") {
-              console.log("this food is present to the cafe");
-            }
-          }
-          );
-          setSearch(Searched);
+       console.log("Button was Clicked");
         }}>Search</button>
       </div>
     </div>

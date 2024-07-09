@@ -42,7 +42,7 @@ text-decoration: underline;
   border-radius: 10px;
   padding: 20px;
   font-size: 20px;
-  border: none;
+  border: 1px solid gray;
  
   /* margin-top: 15px; */
 }
@@ -109,7 +109,7 @@ a .card-para, .card-heading{
     background-color: white;
     font-size: 20px;
     cursor: pointer;
-    border: none;
+    border:1px solid gray
 }
 .btn:hover{
     background-color: green;
