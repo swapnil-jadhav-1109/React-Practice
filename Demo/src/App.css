@@ -71,8 +71,8 @@ p{
 
 .res-card{
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-    width: 230px;
-    height: 350px;
+    width: 240px;
+    height: 340px;
     margin: 20px;
     border-radius: 10px;
  }
@@ -115,5 +115,4 @@ a .card-para, .card-heading{
     background-color: green;
     color: white;
 }
-
 

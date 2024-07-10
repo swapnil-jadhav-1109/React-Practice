@@ -1,8 +1,9 @@
 import { LOGO_URL } from '../utilities/constants'
 import { useState } from 'react';
+import { useContext } from 'react';
 import resobj from "../utilities/api";
 const Header = () => {
-  const [Search, setSearch] = useState(resobj);
+  const [Search, setSearch] = useState("");
   return (
     <div className="header">
       <div className="logo-container">
@@ -19,10 +20,19 @@ const Header = () => {
         </ul>
       </div>
       <div className="search-container">
-        <input type="search" placeholder='search Here' className='searchInput' />
+        <input type="search" placeholder='search Here' className='searchInput'
+         value={Search} 
+         onChange={(e)=>{
+           setSearch(e.target.value);
+         }}
+         />
         <hr />
         <button className='btn' onClick={() => {
-       console.log("Button was Clicked");
+       console.log(Search);
+       const filteredrest = listofRestaurant.filter((res)=>{
+     res.data.info.name.toLowerCase().includes(Search.toLowerCase());
+     setlistofRestaurant(filteredrest);
+       })
         }}>Search</button>
       </div>
     </div>
