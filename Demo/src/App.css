@@ -18,13 +18,13 @@
     background: none;
     margin-top: 5px;
 }
-.nav-items > ul > a >li{
+.nav-items > ul >li{
     padding: 10px;
     margin: 20px;
     color: black;
     list-style-type: none;
 }
-.nav-items > ul > a > li:hover{
+.nav-items > ul > li:hover{
 color:orangered;
 text-decoration: underline;
 }
