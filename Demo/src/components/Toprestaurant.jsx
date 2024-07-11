@@ -2,6 +2,8 @@ import React from 'react'
 import { useState,useEffect } from 'react';
 import ShimerUi from './ShimerUi';
 import Card from './Card'
+import { FaArrowLeft } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa6";
 
 
 const Toprestaurant = () => {
@@ -37,10 +39,16 @@ const Toprestaurant = () => {
             Top rated restaurants
           </button>
         </div> */}
-        <div className="cards">
+        <div className="Top-Restaurants">
+        <div className=" slider-arrow">
+        <p className='arrow'>< FaArrowLeft/></p>
+        <p className='arrow'><FaArrowRight /></p>
+        </div>
+         <div  className="Top-Restaurants-cards">
           {listofTopRestaurant.map((restaurant, index) => (
             <Card key={index} data={restaurant} />
           ))}
+          </div>
         </div>
       </div>
     );
