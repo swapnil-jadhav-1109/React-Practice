@@ -108,6 +108,7 @@ p{
     height: 300px;
     margin: 20px;
     border-radius: 10px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -40px;
  }
  .cards{
     display: flex;
