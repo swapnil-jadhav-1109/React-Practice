@@ -40,7 +40,6 @@ const Header = () => {
       Name: "Cart"
     },
   ]
-console.log(Links);
   return (
     <div className="header">
       <div className="logo-container">

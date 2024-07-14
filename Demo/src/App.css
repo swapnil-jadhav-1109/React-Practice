@@ -1,6 +1,6 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
 *{
     margin: 0;
@@ -57,7 +57,7 @@
     list-style-type: none;
 }
 .nav-items > ul > li:hover{
-color:orangered;
+color:rgb(254, 98, 41);
 }
 .nav-items > ul{
  display: flex;
