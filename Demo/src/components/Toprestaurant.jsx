@@ -2,8 +2,8 @@ import React from 'react'
 import { useState,useEffect } from 'react';
 import ShimerUi from './ShimerUi';
 import Card from './Card';
-import { FaArrowLeft } from "react-icons/fa";
-import { FaArrowRight } from "react-icons/fa6";
+import { IoMdArrowBack } from "react-icons/io";
+import {  IoMdArrowForward } from "react-icons/io";
 
 
 const Toprestaurant = () => {
@@ -42,8 +42,12 @@ const Toprestaurant = () => {
   
     return (
       <div className="body">
-        <div className="restaurant-heading">
-        <h1>Top Restaurant Chains in Satara</h1>
+        <div className="restaurant-heading2">
+        <h2 className='heading heading1'>Top Restaurant Chains in Satara</h2>
+        <div className=" slider-arrow">
+        <p className='arrow' onClick={nextslide}><IoMdArrowBack/></p>
+        <p className='arrow'  onClick={prevslide}><IoMdArrowForward /></p>
+        </div>
         </div>
         {/* <div>
           <button className="btn" onClick={() => {
@@ -53,11 +57,8 @@ const Toprestaurant = () => {
             Top rated restaurants
           </button>
         </div> */}
+    
         <div className="Top-Restaurants">
-        <div className=" slider-arrow">
-        <p className='arrow' onClick={nextslide}>< FaArrowLeft/></p>
-        <p className='arrow'  onClick={prevslide}><FaArrowRight /></p>
-        </div>
          <div  className="Top-Restaurants-cards">
           {listofTopRestaurant.map((restaurant, index) => (
            <div key={index} className='top-cards shrink-0 duration-500' style ={{transform: `translateX(${slide}00%)` }}> <Card  data={restaurant} /></div>

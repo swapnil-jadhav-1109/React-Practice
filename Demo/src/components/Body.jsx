@@ -30,7 +30,7 @@ const Body = () => {
     <div className="body">
       <Toprestaurant />
       <div className="restaurant-heading">
-        <h1>Restaurants with online food delivery in Satara</h1>
+        <h2 className='heading'>Restaurants with online food delivery in Satara</h2>
       </div>
       {/* <div>
         <button className="btn" onClick={() => {
