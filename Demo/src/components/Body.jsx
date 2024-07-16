@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import Header from "./Header";
 import ShimerUi from "./ShimerUi.jsx";
 import Toprestaurant from "./Toprestaurant.jsx";
+import {Link} from 'react-router-dom';
 
 const Body = () => {
   const [listofRestaurant, setlistofRestaurant] = useState([]);
@@ -41,9 +42,10 @@ const Body = () => {
         </button>
       </div> */}
       <div className="cards">
-        {listofRestaurant.map((restaurant, index) => (
+       <Link> {listofRestaurant.map((restaurant, index) => (
           <Card key={index} data={restaurant} />
-        ))}
+        ))}</Link>
+        
       </div>
     </div>
   );

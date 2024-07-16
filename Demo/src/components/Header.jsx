@@ -1,7 +1,4 @@
 // import { LOGO_URL } from '../utilities/constants'
-import { useState } from 'react';
-import { useContext } from 'react';
-import resobj from "../utilities/api";
 import { SiSwiggy } from "react-icons/si";
 import { PiCaretDown } from "react-icons/pi";
 import { IoBagOutline } from "react-icons/io5";
@@ -10,36 +7,37 @@ import { CiDiscount1 } from "react-icons/ci";
 import { MdManageAccounts } from "react-icons/md";
 import { IoHelpBuoyOutline } from "react-icons/io5";
 import { FaCartPlus } from "react-icons/fa";
+import { Link } from "react-router-dom";
 const Header = () => {
   // const [Search, setSearch] = useState("");
 
-  const Links = [
-    {
-      icons: <IoBagOutline  className='logos'/>,
-      Name: "Swiggy Corporate"
-    },
-    {
-      icons: < IoSearch className='logos' />,
-      Name: "Search"
-    },
-    {
-      icons: < CiDiscount1 className='logos' />,
-      Name: "Offers",
-      Sup: "New"
-    },
-    {
-      icons: <IoHelpBuoyOutline className='logos' />,
-      Name: "Help"
-    },
-    {
-      icons: < MdManageAccounts className='logos'/>,
-      Name: "Sign In"
-    },
-    {
-      icons: <FaCartPlus className='logos'/>,
-      Name: "Cart"
-    },
-  ]
+  // const Links = [
+  //   {
+  //     icons: <IoBagOutline  className='logos'/>,
+  //     Name: "Swiggy Corporate"
+  //   },
+  //   {
+  //     icons: < IoSearch className='logos' />,
+  //     Name: "Search"
+  //   },
+  //   {
+  //     icons: < CiDiscount1 className='logos' />,
+  //     Name: "Offers",
+  //     Sup: "New"
+  //   },
+  //   {
+  //     icons: <IoHelpBuoyOutline className='logos' />,
+  //     Name: "Help"
+  //   },
+  //   {
+  //     icons: < MdManageAccounts className='logos'/>,
+  //     Name: "Sign In"
+  //   },
+  //   {
+  //     icons: <FaCartPlus className='logos'/>,
+  //     Name: "Cart"
+  //   },
+  // ]
   return (
     <div className="header">
       <div className="logo-container">
@@ -51,20 +49,24 @@ const Header = () => {
       </div>
 
       <div className="nav-items">
-        <ul>
-       {
+        <ul className="logos">
+       {/* {
          Links.map((link,index)=>{
           return <li key ={index} className="nav-links">
-            {link.icons }
-            {link.Name}
+           
+           {link.icons }
+           {link.Name}
+           
             <sup>{link.Sup}</sup>
           </li>
          }) 
-       }
-          {/* <li className="nav-links">Home</li>
-           <li className="nav-links">About Us</li>
-          <li className="nav-links">Contact Us</li>
-           <li className="nav-links">Cart</li> */}
+       } */}
+          <Link to="Corporate"><li className="nav-links"><IoBagOutline  className='logos'/>Swiggy Corporate </li> </Link>
+          <Link to ="Search"> <li className="nav-links"> < IoSearch className='logos' />Search</li></Link>
+          <Link to ="Offers"><li className="nav-links">< CiDiscount1 className='logos' />Offers <sup>New</sup> </li></Link>
+          <Link><li className="nav-links"><IoHelpBuoyOutline className='logos' />Help </li></Link>
+          <Link><li className="nav-links">< MdManageAccounts className='logos'/> Sign In </li></Link>
+          <Link><li className="nav-links"><FaCartPlus className='logos'/>Cart </li></Link>
         </ul>
       </div>
       {/* <div className="search-container">

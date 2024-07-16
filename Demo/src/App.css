@@ -1,6 +1,6 @@
-/* @tailwind base;
+@tailwind base;
 @tailwind components;
-@tailwind utilities; */
+@tailwind utilities;
 
 *{
     margin: 0;
@@ -41,23 +41,32 @@
     font-weight: bold;
 }
 .city:hover{
-    color: rgb(255, 135, 91);
+    color: rgb(245, 141, 4);
 }
 .caret-logo{
-  color: rgb(255, 135, 91);
+  color: rgb(245, 141, 4);
   font-size: 20px;
 }
 .logos{
-  margin-right: 20px;
+  margin-right: 10px;
 }
-.nav-items > ul >li{
+sup{
+    color:rgb(245, 141, 4);
+    font-weight: 800;
+}
+ a > li{
     font-size: 16px;
     margin: 20px;
     color: black;
+    font-weight: 600;
+    text-decoration: none;
     list-style-type: none;
 }
-.nav-items > ul > li:hover{
-color:rgb(254, 98, 41);
+a{
+   text-decoration: none;
+}
+.nav-items > ul > a > li:hover{
+color:rgb(245, 141, 4);
 }
 .nav-items > ul{
  display: flex;
@@ -94,7 +103,9 @@ p{
 .restaurant-heading{
     margin-left: 200px;
 }
-.cards{
+ .cards > a{
+    color: black;
+    text-decoration: none;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -111,9 +122,7 @@ p{
     border-radius: 10px;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -40px;
  }
- .cards{
-    display: flex;
- }
+
  .card-img{
     width: 100%;
     height: 140px;
@@ -187,7 +196,6 @@ li{
     overflow: hidden;
     margin-bottom: 20px;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -35px;
-   
 }
 .slider-arrow{
     display: flex;
@@ -199,10 +207,18 @@ li{
 .arrow{
    background-color: rgb(197, 197, 197);
     border-radius: 50%;
-    padding:  5px;
-    font-size: 17px;
-    height: 30px;
-    width: 30px;
+    padding:  8px;
+    font-size: 18px;
+    height: 35px;
+    width: 35px;
     cursor: pointer;
 }
 
+/* Menu */
+.Menu{
+    max-width: 1200px;
+    margin: 10px auto;
+}
+.menu-para{
+    font-size: 10px;
+}
