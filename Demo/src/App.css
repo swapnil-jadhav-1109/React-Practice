@@ -6,7 +6,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: ProximaNova, arial, Helvetica Neue, sans-serif;
+    font-family:  arial, Helvetica Neue, sans-serif;
+   
 }
 .header{
     display: flex;
@@ -190,6 +191,7 @@ li{
 }
 .heading{
     margin-left: -10px;
+    
 }
 .heading1{
     margin-left: 20px;

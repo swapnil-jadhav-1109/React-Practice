@@ -66,6 +66,7 @@
 import Card from "./Card";
 import { useState, useEffect } from "react";
 import ShimerUi from "./ShimerUi.jsx";
+// import Slide1 from "./Slide1.jsx";
 // import axios from 'axios'
 import Toprestaurant from "./Toprestaurant.jsx";
 import { Link } from 'react-router-dom';
@@ -82,8 +83,8 @@ const Body = () => {
     try {
       const response = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.6804639&lng=74.018261&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
       const json = await response.json();
-      console.log(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-      setlistofRestaurant(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+      console.log(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+      setlistofRestaurant(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     } catch (error) {
       console.error("Failed to fetch restaurants:", error);
     } finally {
@@ -97,6 +98,7 @@ const Body = () => {
 
   return (
     <div className="body">
+      {/* <Slide1 /> */}
       <Toprestaurant />
       <div className="restaurant-heading">
         <h2 className='heading'>Restaurants with online food delivery in Satara</h2>

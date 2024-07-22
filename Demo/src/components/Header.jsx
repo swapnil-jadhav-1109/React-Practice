@@ -61,12 +61,12 @@ const Header = () => {
           </li>
          }) 
        } */}
-          <Link to="Corporate"><li className="nav-links"><IoBagOutline  className='logos'/>Swiggy Corporate </li> </Link>
+          <Link to="swiggy-corporate"><li className="nav-links"><IoBagOutline  className='logos'/>Swiggy Corporate </li> </Link>
           <Link to ="Search"> <li className="nav-links"> < IoSearch className='logos' />Search</li></Link>
           <Link to ="Offers"><li className="nav-links">< CiDiscount1 className='logos' />Offers <sup>New</sup> </li></Link>
-          <Link><li className="nav-links"><IoHelpBuoyOutline className='logos' />Help </li></Link>
-          <Link><li className="nav-links">< MdManageAccounts className='logos'/> Sign In </li></Link>
-          <Link><li className="nav-links"><FaCartPlus className='logos'/>Cart </li></Link>
+          <Link to  = "help"><li className="nav-links"><IoHelpBuoyOutline className='logos' />Help </li></Link>
+          <Link to = "sign-in"><li className="nav-links">< MdManageAccounts className='logos'/> Sign In </li></Link>
+          <Link to = "cart"><li className="nav-links"><FaCartPlus className='logos'/>Cart </li></Link>
         </ul>
       </div>
       {/* <div className="search-container">
