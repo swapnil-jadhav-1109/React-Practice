@@ -39,14 +39,14 @@ const Slide1 = () => {
   //   setSlide(slide - 1)
   // };
   const nextSlide = () => {
-    if (slide > -((listofTopRestaurant.length - 14))) {
-      setSlide(slide - 2);
+    if (slide > -((listofTopRestaurant.length - 13))) {
+      setSlide(slide - 1);
     }
   };
 
   const prevSlide = () => {
-    if (slide <= 0) {
-      setSlide(slide + 2);
+    if (slide < 0) {
+      setSlide(slide + 1);
     }
   };
 
