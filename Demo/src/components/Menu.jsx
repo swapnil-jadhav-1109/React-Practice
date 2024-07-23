@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import ShimerUi from "./ShimerUi";
 import { useParams } from "react-router-dom";
+import { MENU_API } from "../utilities/constants";
 
 const Menu = () => {
     const [resInfo, setResInfo] = useState(null);
@@ -11,7 +12,7 @@ const Menu = () => {
     useEffect(() => {
         const resMenu = async () => {
             try {
-                const data = await fetch(`https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=17.6804639&lng=74.018261&restaurantId=${resId}&catalog_qa=undefined&submitAction=ENTER`);
+                const data = await fetch(MENU_API + resId);
                 const json = await data.json();
                 console.log(json);
                 setResInfo(json.data);

@@ -3,6 +3,7 @@
 import Card from "./Card";
 import { useState, useEffect } from "react";
 import ShimerUi from "./ShimerUi.jsx";
+import { RESTAURANT_API } from "../utilities/constants.jsx";
 import Slide1 from "./Slide1.jsx";
 // import axios from 'axios'
 import Toprestaurant from "./Toprestaurant.jsx";
@@ -18,7 +19,7 @@ const Body = () => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.5204303&lng=73.8567437&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+      const response = await fetch(RESTAURANT_API);
       const json = await response.json();
       // console.log(json);
       // console.log(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);

@@ -5,6 +5,7 @@ import React, { useState, useEffect } from 'react';
 import ShimerUi from './ShimerUi';
 import Slider1Card from './Slider1Card'
 import { IoMdArrowBack, IoMdArrowForward } from "react-icons/io";
+import { RESTAURANT_API } from '../utilities/constants';
 
 const Slide1 = () => {
   const [listofTopRestaurant, setListofTopRestaurant] = useState([]);
@@ -12,7 +13,7 @@ const Slide1 = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const API_URL = "https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.6804639&lng=74.018261&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
+  const API_URL =RESTAURANT_API;
 
   useEffect(() => {
     fetchData();

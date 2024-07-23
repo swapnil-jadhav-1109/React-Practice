@@ -1,4 +1,5 @@
 import React from 'react'
+import { IMG_PATH } from '../utilities/constants';
 
 const Card = (props) => {
   const { cloudinaryImageId, name, avgRating, cuisines, locality } = props.data.info;
@@ -6,7 +7,7 @@ const Card = (props) => {
   return (
     <div>
       <div className="res-card">
-        <img className="card-img" src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" + cloudinaryImageId} alt="" />
+        <img className="card-img" src={ IMG_PATH + cloudinaryImageId} alt="" />
        
        <h2 className='card-heading'>{name}</h2>
         <div className="star-container">

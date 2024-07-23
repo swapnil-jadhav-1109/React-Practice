@@ -1,4 +1,4 @@
-// import { LOGO_URL } from '../utilities/constants'
+
 import { SiSwiggy } from "react-icons/si";
 import { PiCaretDown } from "react-icons/pi";
 import { IoBagOutline } from "react-icons/io5";
@@ -41,7 +41,6 @@ const Header = () => {
   return (
     <div className="header">
       <div className="logo-container">
-        {/* <img className="logo" src={LOGO_URL} /> */}
         <SiSwiggy className='logo' />
 
        <div className='select'> <span className='city'>Other</span> Satara,Maharashtra,India </div>
