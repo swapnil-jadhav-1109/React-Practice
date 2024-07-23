@@ -87,9 +87,9 @@ const Toprestaurant = () => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.6804639&lng=74.018261&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+      const response = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.5204303&lng=73.8567437&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
       const json = await response.json();
-      console.log(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+      // console.log(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
       setlistofTopRestaurant(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     } catch (error) {
       console.error("Failed to fetch top restaurants:", error);
@@ -117,7 +117,7 @@ const Toprestaurant = () => {
   return (
     <div className="body">
       <div className="restaurant-heading2">
-        <h2 className='heading heading1'>Top Restaurant Chains in Satara</h2>
+        <h2 className='heading heading1'>Top Restaurant Chains in Pune</h2>
         <div className="slider-arrow">
           <p className='arrow' onClick={prevSlide}><IoMdArrowBack /></p>
           <p className='arrow' onClick={nextSlide}><IoMdArrowForward /></p>

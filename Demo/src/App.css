@@ -191,6 +191,8 @@ li{
 }
 .heading{
     margin-left: -10px;
+    font-weight: 800;
+    font-size: 23px;
     
 }
 .heading1{
@@ -210,6 +212,13 @@ li{
     justify-content: flex-end;
     
 }
+.slider1{
+    margin-right: 220px;
+    /* margin-bottom: 40px; */
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
 .arrow{
    background-color: rgb(197, 197, 197);
     border-radius: 50%;
@@ -227,4 +236,29 @@ li{
 }
 .menu-para{
     font-size: 10px;
+}
+
+.slider-content{
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -35px;
+    max-width: 1200px;
+    margin: 20px 190px;
+    
+}
+.dish{
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+
+}
+.Swiggy-dishes{
+    width: 160px;
+  margin: 10px;
+}
+
+/* user */
+
+.user-card{
+    padding: 20px;
+    border: 1px solid black;
+    margin: 20px;
 }
