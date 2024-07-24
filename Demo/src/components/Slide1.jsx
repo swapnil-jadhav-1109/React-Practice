@@ -45,7 +45,7 @@ const Slide1 = () => {
   };
 
   const prevSlide = () => {
-    if (slide < 0) {
+    if (slide <= 6) {
       setSlide(slide + 1);
     }
   };
