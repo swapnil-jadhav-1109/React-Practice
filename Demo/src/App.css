@@ -241,7 +241,8 @@ li{
 .slider-content{
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -35px;
     max-width: 1200px;
-    margin: 20px 190px;
+    margin: 0 190px 20px 190px;
+    
     
 }
 .dish{

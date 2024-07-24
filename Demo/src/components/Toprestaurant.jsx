@@ -43,7 +43,7 @@ const Toprestaurant = () => {
   return (
     <div className="body">
       <div className="restaurant-heading2">
-        <h2 className='heading heading1'>Top Restaurant Chains in Pune</h2>
+        <p className='heading heading1'>Top Restaurant Chains in Pune</p>
         <div className="slider-arrow">
           <p className='arrow' onClick={prevSlide}><IoMdArrowBack /></p>
           <p className='arrow' onClick={nextSlide}><IoMdArrowForward /></p>

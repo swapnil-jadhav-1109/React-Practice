@@ -42,12 +42,12 @@ const Slide1 = () => {
  
   return (
     <div>
-      <div className="restaurant-heading">
-        <p className='heading'>What's on your mind?</p>
-      </div>
-      <div className="slider1">
+      <div className="restaurant-heading2">
+        <p className='heading heading1'>What's on your mind?</p>
+      <div className="slider-arrow">
         <p className='arrow' onClick={prevSlide}><IoMdArrowBack /></p>
         <p className='arrow' onClick={nextSlide}><IoMdArrowForward /></p>
+      </div>
       </div>
       <div className="slider-content" >
         <div className="dish">
