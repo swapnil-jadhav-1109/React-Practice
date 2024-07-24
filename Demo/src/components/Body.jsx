@@ -8,6 +8,7 @@ import Slide1 from "./Slide1.jsx";
 // import axios from 'axios'
 import Toprestaurant from "./Toprestaurant.jsx";
 import { Link } from 'react-router-dom';
+import useOnlineStatus from "../utilities/useOnlineStatus.jsx";
 
 const Body = () => {
   const [listofRestaurant, setlistofRestaurant] = useState([]);
@@ -31,6 +32,12 @@ const Body = () => {
     }
   };
 
+  const onlineStatus = useOnlineStatus();
+  if(onlineStatus === false)
+    return (
+   <h1>Looks like you're offline!! Please check your internet connection </h1>
+    )
+    
   if (loading) {
     return <ShimerUi />;
   }
