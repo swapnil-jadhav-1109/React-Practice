@@ -8,11 +8,9 @@ import { IoMdArrowBack, IoMdArrowForward } from "react-icons/io";
 import { RESTAURANT_API } from '../utilities/constants';
 
 const Slide1 = () => {
-  const [listofTopRestaurant, setListofTopRestaurant] = useState([]);
+  const [listofTopRestaurant, setListofTopRestaurant] = useState(null);
   const [slide, setSlide] = useState(0);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
+  
   const API_URL =RESTAURANT_API;
 
   useEffect(() => {
@@ -20,25 +18,12 @@ const Slide1 = () => {
   }, []);
 
   const fetchData = async () => {
-    try {
-      const response = await fetch(API_URL);
+    const response = await fetch(API_URL);
       const json = await response.json();
       setListofTopRestaurant(json?.data?.cards[0]?.card?.card?.gridElements?.infoWithStyle?.info || []);
-    } catch (error) {
-      setError("Failed to fetch top restaurants");
-    } finally {
-      setLoading(false);
-    }
-  };
+   };
 
-  // const nextSlide = () => {
-  //  setSlide(slide + 1)
-  // };
-
-  // const prevSlide = () => {
-  //   setSlide(slide - 1)
-  // };
-  const nextSlide = () => {
+ const nextSlide = () => {
     if (slide > -((listofTopRestaurant.length - 13))) {
       setSlide(slide - 1);
     }
@@ -50,14 +35,11 @@ const Slide1 = () => {
     }
   };
 
-  if (loading) {
+  if (listofTopRestaurant == null) {
     return <ShimerUi />;
   }
 
-  if (error) {
-    return <div>{error}</div>;
-  }
-
+ 
   return (
     <div>
       <div className="restaurant-heading">

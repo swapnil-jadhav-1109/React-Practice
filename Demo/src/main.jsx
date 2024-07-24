@@ -34,7 +34,7 @@
 //   </React.StrictMode>
 // );
 
-import React from 'react';
+import React , {lazy , Suspense} from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.jsx';
 import './index.css';
@@ -45,10 +45,12 @@ import Menu from './components/Menu.jsx'
 import Help from './components/Help.jsx';
 import Offers from './components/Offers.jsx';
 import SignIn from './components/SignIn.jsx';
-import Cart from './components/Cart.jsx';
+// import Cart from './components/Cart.jsx';
 import SwiggyCorporate from './components/SwiggyCorporate.jsx';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
+
+const Cart = lazy(()=> import ('./components/Cart.jsx'));
 const appRouter = createBrowserRouter([
   {
     path: "/",
@@ -81,7 +83,7 @@ const appRouter = createBrowserRouter([
       },
       {
         path:"/cart",
-        element: <Cart />
+        element: <Suspense fallback = "Loading..."><Cart /></Suspense>
       },
       {
         path: "/restaurant/:resId",

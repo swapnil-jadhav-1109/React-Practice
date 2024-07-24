@@ -11,26 +11,18 @@ import { Link } from 'react-router-dom';
 import useOnlineStatus from "../utilities/useOnlineStatus.jsx";
 
 const Body = () => {
-  const [listofRestaurant, setlistofRestaurant] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [listofRestaurant, setlistofRestaurant] = useState(null);
 
   useEffect(() => {
     fetchData();
   }, []);
 
   const fetchData = async () => {
-    try {
+  
       const response = await fetch(RESTAURANT_API);
       const json = await response.json();
-      // console.log(json);
-      // console.log(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-      setlistofRestaurant(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-    } catch (error) {
-      console.error("Failed to fetch restaurants:", error);
-    } finally {
-      setLoading(false);
-    }
-  };
+       setlistofRestaurant(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    };
 
   const onlineStatus = useOnlineStatus();
   if(onlineStatus === false)
@@ -38,7 +30,7 @@ const Body = () => {
    <h1>Looks like you're offline!! Please check your internet connection </h1>
     )
     
-  if (loading) {
+  if (listofRestaurant == null) {
     return <ShimerUi />;
   }
 
