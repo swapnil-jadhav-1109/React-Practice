@@ -1,5 +1,4 @@
 
-
 import Card from "./Card";
 import { useState, useEffect } from "react";
 import ShimerUi from "./ShimerUi.jsx";
