@@ -1,16 +1,5 @@
-
-
-
-.shimer-container{
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 90px;
-}
-.shimer-card{
-    width: 230px;
-    height: 300px;
-    margin: 20px;
-    border-radius: 10px;
-    background-color: #f0f0f0;
-
-}
+/* 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ */

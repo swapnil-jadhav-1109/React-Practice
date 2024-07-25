@@ -52,7 +52,7 @@ const Slide1 = () => {
       <div className="slider-content" >
         <div className="dish">
         {listofTopRestaurant.map((restaurant, index) => (
-          <div key={index}  style={{ transform: `translateX(${slide * 100}%)`, transition: 'transform 0.5s ease' }}>
+          <div key={index}  style={{ transform: `translateX(${slide * 100}%)`, }}>
            <Slider1Card data={restaurant}/>
           </div>
         ))}
