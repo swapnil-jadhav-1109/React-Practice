@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import ShimerUi from "./ShimerUi";
 import { useParams } from "react-router-dom";
 import useMenu from "../utilities/useMenu";
-import { MENU_API } from "../utilities/constants";
 
 const Menu = () => {
     const { resId } = useParams();
@@ -14,8 +13,8 @@ const Menu = () => {
     if (resInfo === null) return <ShimerUi />;
 
     const { name, cuisines, costForTwoMessage } = resInfo.cards[2]?.card?.card?.info || {};
-    const itemCards = resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards || [];
-    console.log(itemCards);
+    const itemCards = resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards || [];
+   
 
     return (
         <>
