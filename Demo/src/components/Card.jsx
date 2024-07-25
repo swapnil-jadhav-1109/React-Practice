@@ -2,12 +2,16 @@ import React from 'react'
 import { IMG_PATH } from '../utilities/constants';
 
 const Card = (props) => {
-  const { cloudinaryImageId, name, avgRating, cuisines, locality } = props.data.info;
+  const { cloudinaryImageId, name, avgRating, cuisines, locality} = props.data.info;
   const time = props.data.info.sla.slaString;
+  // const discount = props.data.info.aggregatedDiscountInfoV3.header;
+  // const discount1 = props.data.info.aggregatedDiscountInfoV3.subHeader;
+
   return (
-    <div>
+    <div className='restaurant-card'>
       <div className="res-card">
         <img className="card-img" src={ IMG_PATH + cloudinaryImageId} alt="" />
+        {/* <h2>{discount} + {discount1}</h2> */}
        
        <h2 className='card-heading'>{name}</h2>
         <div className="star-container">

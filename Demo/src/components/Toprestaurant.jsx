@@ -6,6 +6,7 @@ import ShimerUi from './ShimerUi';
 import Card from './Card';
 import { IoMdArrowBack, IoMdArrowForward } from "react-icons/io";
 import { RESTAURANT_API } from '../utilities/constants';
+import { Link } from 'react-router-dom';
 
 const Toprestaurant = () => {
   const [listofTopRestaurant, setlistofTopRestaurant] = useState(null);
@@ -57,7 +58,9 @@ const Toprestaurant = () => {
               className='top-cards shrink-0 duration-500' 
               style={{ transform: `translateX(${slide * 100}%)` }}
             >
+               <Link key={index} to={`/restaurant/${restaurant.info.id}`}>
               <Card data={restaurant} />
+              </Link>
             </div>
           ))}
         </div>

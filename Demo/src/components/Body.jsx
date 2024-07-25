@@ -21,6 +21,7 @@ const Body = () => {
   
       const response = await fetch(RESTAURANT_API);
       const json = await response.json();
+      console.log(json);
        setlistofRestaurant(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     };
 
@@ -44,7 +45,7 @@ const Body = () => {
       <div className="cards">
         {listofRestaurant.map((restaurant, index) => (
           <Link key={index} to={`/restaurant/${restaurant.info.id}`}>
-            <Card data={restaurant} />
+            <Card data={restaurant}  />
           </Link>
         ))}
       </div>

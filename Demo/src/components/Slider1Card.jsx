@@ -31,7 +31,7 @@ console.log(img);
   return (
     <div>
       <img 
-        className='Swiggy-dishes '
+        className='Swiggy-dishes'
         src={IMG_PATH + img} 
         alt={`Dish image`} 
       />
