@@ -27,9 +27,12 @@ const Menu = () => {
             <div className="Menu">
                 <h1>{name}</h1>
                 <p className="Menu">{cuisines?.join(" , ")} - {costForTwoMessage}</p>
-           
 
-            {Categories.map((category , index)=>  <ResCategory key = {index} data = {category?.card?.card}/>)}
+
+                {Categories.map((category, index) => 
+                <ResCategory key={category.card.card.title}
+                 data={category?.card?.card}
+                 />)}
 
 
 
