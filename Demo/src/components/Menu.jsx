@@ -9,7 +9,10 @@ import ResCategory from "./ResCategory";
 const Menu = () => {
     const { resId } = useParams();
 
+
     const resInfo = useMenu(resId);
+
+   
 
     if (resInfo === null) return <ShimerUi />;
 
@@ -32,6 +35,7 @@ const Menu = () => {
                 {Categories.map((category, index) => 
                 <ResCategory key={category.card.card.title}
                  data={category?.card?.card}
+            
                  />)}
 
 

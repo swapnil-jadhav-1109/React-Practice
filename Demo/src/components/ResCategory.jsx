@@ -2,13 +2,13 @@ import React, { useState } from 'react'
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import ItemList from './ItemList';
 
-const ResCategory = ({ data }) => {
-  const [show , setShow] = useState(false);
+const ResCategory = ({ data}) => {
+  const [show , setShow] = useState(true);
 
   const handleClick = ()=>{
     setShow(!show);
-
   }
+
 
   return (
     <div>
