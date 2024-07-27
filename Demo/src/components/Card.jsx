@@ -1,12 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { IMG_PATH } from '../utilities/constants';
+import UserContext from '../utilities/UserContext';
 
 const Card = (props) => {
   const { cloudinaryImageId, name, avgRating, cuisines, locality} = props.data.info;
   const time = props.data.info.sla.slaString;
   // const discount = props.data.info.aggregatedDiscountInfoV3.header;
   // const discount1 = props.data.info.aggregatedDiscountInfoV3.subHeader;
-
+  const {loggedInUser} =  useContext(UserContext);
   return (
     <div className='restaurant-card'>
       <div className="res-card">
@@ -25,6 +26,7 @@ const Card = (props) => {
         </div>
        <p className="card-para">{cuisines.join(" , ")}</p>
        <p className="card-para">{locality}</p>
+       <p className="card-para">User : {loggedInUser}</p>
       </div>
     </div>
   )

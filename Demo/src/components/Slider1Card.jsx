@@ -27,7 +27,6 @@ import { IMG_PATH } from '../utilities/constants';
 
 const Slider1Card = (props) => {
 const img = props.data.imageId;
-console.log(img);
   return (
     <div>
       <img 

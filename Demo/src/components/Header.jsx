@@ -8,7 +8,11 @@ import { MdManageAccounts } from "react-icons/md";
 import { IoHelpBuoyOutline } from "react-icons/io5";
 import { FaCartPlus } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import UserContext from "../utilities/UserContext";
 const Header = () => {
+
+  const {loggedInUser} = useContext(UserContext);
   // const [Search, setSearch] = useState("");
 
   // const Links = [
@@ -66,6 +70,7 @@ const Header = () => {
           <Link to  = "help"><li className="nav-links"><IoHelpBuoyOutline className='logos' />Help </li></Link>
           <Link to = "sign-in"><li className="nav-links">< MdManageAccounts className='logos'/> Sign In </li></Link>
           <Link to = "cart"><li className="nav-links"><FaCartPlus className='logos'/>Cart </li></Link>
+          <Link><li> {loggedInUser} </li></Link>
         </ul>
       </div>
       {/* <div className="search-container">
