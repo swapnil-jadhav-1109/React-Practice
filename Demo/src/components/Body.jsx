@@ -1,6 +1,6 @@
 
 import Card from "./Card";
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect } from "react";
 import ShimerUi from "./ShimerUi.jsx";
 import { RESTAURANT_API } from "../utilities/constants.jsx";
 import Slide1 from "./Slide1.jsx";
@@ -8,12 +8,12 @@ import Slide1 from "./Slide1.jsx";
 import Toprestaurant from "./Toprestaurant.jsx";
 import { Link } from 'react-router-dom';
 import useOnlineStatus from "../utilities/useOnlineStatus.jsx";
-import UserContext from "../utilities/UserContext.jsx";
+// import UserContext from "../utilities/UserContext.jsx";
 
 const Body = () => {
   const [listofRestaurant, setlistofRestaurant] = useState(null);
-  
-  const {loggedInUser , setUserName} = useContext(UserContext);
+
+  // const {loggedInUser , setUserName} = useContext(UserContext);
 
   useEffect(() => {
     fetchData();
@@ -40,14 +40,13 @@ const Body = () => {
 
   return (
     <div className="body">
-      <label htmlFor="UserName">UserName : </label>
+      {/* <label htmlFor="UserName">UserName : </label>
       <input type="text" id="UserName" 
       value={loggedInUser}
       onChange={(e)=>{
         setUserName(e.target.value);
       }}
-      
-      />
+      /> */}
        <Slide1 /> 
       <Toprestaurant />
       <div className="restaurant-heading">
