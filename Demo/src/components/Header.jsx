@@ -8,9 +8,12 @@ import { MdManageAccounts } from "react-icons/md";
 import { IoHelpBuoyOutline } from "react-icons/io5";
 import { FaCartPlus } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 // import { useContext } from "react";
 // import UserContext from "../utilities/UserContext";
 const Header = () => {
+
+  const cartItems = useSelector((store) => store.cart.items);
 
   // const {loggedInUser} = useContext(UserContext);
   // const [Search, setSearch] = useState("");
@@ -69,7 +72,7 @@ const Header = () => {
           <Link to ="Offers"><li className="nav-links">< CiDiscount1 className='logos' />Offers <sup>New</sup> </li></Link>
           <Link to  = "help"><li className="nav-links"><IoHelpBuoyOutline className='logos' />Help </li></Link>
           <Link to = "sign-in"><li className="nav-links">< MdManageAccounts className='logos'/> Sign In </li></Link>
-          <Link to = "cart"><li className="nav-links"><FaCartPlus className='logos'/>Cart </li></Link>
+          <Link to = "cart"><li className="nav-links"> <sup>{cartItems.length} </sup><FaCartPlus className='logos'/> Cart </li></Link>
           {/* <Link><li> {loggedInUser} </li></Link> */}
         </ul>
       </div>
