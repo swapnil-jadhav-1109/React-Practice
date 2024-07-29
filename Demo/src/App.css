@@ -364,3 +364,8 @@ li{
    background-color: rgb(242, 241, 241);
 
 }
+
+/* Cart */
+.Cart-heading{
+    text-align: center;
+}

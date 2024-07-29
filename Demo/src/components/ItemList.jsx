@@ -9,8 +9,8 @@ const ItemList = ({ items }) => {
 
     const Dispatch = useDispatch();
 
-    const HandleAddItems = ()=>{
-        Dispatch(addItems("Pizza"))
+    const HandleAddItems = (item)=>{
+        Dispatch(addItems(item))
     }
     // console.log(items);
     return (
@@ -24,7 +24,7 @@ const ItemList = ({ items }) => {
                     </div>
                     <div >
                        <img className='img-itemlist' src={IMG_PATH + item.card.info.imageId}  alt="" />
-                       <button className='img-btn' onClick={HandleAddItems}><h2>ADD</h2></button>
+                       <button className='img-btn' onClick={()=>HandleAddItems(item)}><h2>ADD</h2></button>
                     </div>
                 </div>
 
@@ -34,3 +34,4 @@ const ItemList = ({ items }) => {
 };
 
 export default ItemList;
+
