@@ -33,11 +33,15 @@ const Cart = () => {
   return (
     <div>
       <h1 className='Cart-heading'>Cart</h1>
-      <button onClick={handleclickRemove}>Clear Cart</button>
+      <div className='clearCart'>
+      <button className='clearCart-Btn'  onClick={handleclickRemove}>Clear Cart</button>
+      </div>
       {cartItems.length === 0 ? (
         <p className='empty-cart-message'>Cart is empty. Please add items to the cart!</p>
       ) : (
+        <div className='Add-to-cart'>
         <ItemList items={cartItems} />
+        </div>
       )}
     </div>
   );
